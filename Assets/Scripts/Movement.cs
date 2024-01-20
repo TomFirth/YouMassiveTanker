@@ -2,8 +2,8 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 public class Movement : MonoBehaviour
 {
-    public Rigidbody rb, Turret;
-    Vector2 movement, turret, turretMovement, vision;
+    public Rigidbody rb;
+    Vector2 movement, vision;
     float rightTrigger, leftTrigger, topSpeed = 25f;
     [SerializeField] WheelCollider lone, ltwo, lthree, lfour;
     [SerializeField] WheelCollider rone, rtwo, rthree, rfour;
@@ -24,9 +24,6 @@ public class Movement : MonoBehaviour
         if (rb.velocity.magnitude > topSpeed) {
             rb.velocity = rb.velocity.normalized * topSpeed;
         }
-        turretMovement = gamepad.rightStick.ReadValue();
-        // Debug.Log("turret" + turretMovement.y);
-        Turret.rotation = Quaternion.Euler(turretMovement.y * 10000 * Time.deltaTime, turretMovement.x * 10000 * Time.deltaTime, 0);
 
         leftTrigger = gamepad.leftTrigger.ReadValue();
         if (leftTrigger > 0) {

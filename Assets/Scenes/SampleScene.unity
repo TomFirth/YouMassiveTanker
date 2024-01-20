@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1104,7 +1104,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 799812876}
-  Turret: {fileID: 1166730002}
   lone: {fileID: 79309894}
   ltwo: {fileID: 1399453077}
   lthree: {fileID: 1580341767}
@@ -1968,7 +1967,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 961294807}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.119785465, y: 0.19566208, z: -0.024087096, w: 0.97303015}
+  m_LocalRotation: {x: 0.11978547, y: 0.19566208, z: -0.024087096, w: 0.97303015}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -2117,6 +2116,7 @@ GameObject:
   - component: {fileID: 1166729998}
   - component: {fileID: 1166730001}
   - component: {fileID: 1166730002}
+  - component: {fileID: 1166730003}
   m_Layer: 0
   m_Name: Turret
   m_TagString: Untagged
@@ -2251,6 +2251,21 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &1166730003
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1166729996}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 627abad4ba33d6c4dbdad666de35f0e4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TurretRb: {fileID: 1166730002}
+  acceleration: 1000
+  brakeForce: 10000
 --- !u!1 &1180546650
 GameObject:
   m_ObjectHideFlags: 0
