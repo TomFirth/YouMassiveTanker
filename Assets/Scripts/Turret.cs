@@ -8,12 +8,6 @@ public class Turret : MonoBehaviour
     public Rigidbody TurretRb;
     Vector2 turretMovement;
 
-    public float acceleration = 1000f;
-    public float brakeForce = 10000f;
-    private float currentLeftAcceleration = 0f;
-    private float currentLeftBrakeForce = 0f;
-    private float currentRightAcceleration = 0f;
-    private float currentRightBrakeForce = 0f;
     private void FixedUpdate()
     {
         var gamepad = Gamepad.current;
